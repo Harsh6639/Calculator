@@ -1,3 +1,8 @@
+
+import java.awt.Color;
+
+
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -7,6 +12,7 @@
  *
  * @author LENOVO
  */
+import java.awt.*;
 public class NewJFrame extends javax.swing.JFrame {
     
     String operators  = null;
@@ -17,6 +23,53 @@ public class NewJFrame extends javax.swing.JFrame {
      */
     public NewJFrame() {
         initComponents();
+        
+        buans.setBackground(Color.green);
+        
+        
+        
+        bu1.setBackground(Color.black);
+        bu1.setForeground(Color.white);
+        bu2.setBackground(Color.black);
+        bu2.setForeground(Color.white);
+        bu3.setBackground(Color.black);
+        bu3.setForeground(Color.white);
+        bu4.setBackground(Color.black);
+        bu4.setForeground(Color.white);
+        bu5.setBackground(Color.black);
+        bu5.setForeground(Color.white);
+        bu6.setBackground(Color.black);
+        bu6.setForeground(Color.white);
+        bu7.setBackground(Color.black);
+        bu7.setForeground(Color.white);
+        bu8.setBackground(Color.black);
+        bu8.setForeground(Color.white);
+        bu9.setBackground(Color.black);
+        bu9.setForeground(Color.white);
+        jButton12.setBackground(Color.black);
+        jButton12.setForeground(Color.white);
+        
+        buadd.setBackground(Color.gray);
+        buadd.setForeground(Color.white);
+         busub.setBackground(Color.gray);
+        busub.setForeground(Color.white);
+         bumulti.setBackground(Color.gray);
+        bumulti.setForeground(Color.white);
+         budivi.setBackground(Color.gray);
+        budivi.setForeground(Color.white);
+        
+         budel.setBackground(Color.darkGray);
+        budel.setForeground(Color.white);
+         buc.setBackground(Color.darkGray);
+        buc.setForeground(Color.white);
+        
+         budot.setBackground(Color.orange);
+        budot.setForeground(Color.green);
+       
+        
+        
+        
+        
     }
 
     /**
