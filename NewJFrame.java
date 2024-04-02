@@ -8,6 +8,9 @@
  * @author LENOVO
  */
 public class NewJFrame extends javax.swing.JFrame {
+    
+    String operators  = null;
+    double number1 = 0, number2 = 0;
 
     /**
      * Creates new form NewJFrame
@@ -26,7 +29,7 @@ public class NewJFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        tf = new javax.swing.JTextField();
         budel = new javax.swing.JButton();
         bu9 = new javax.swing.JButton();
         bu8 = new javax.swing.JButton();
@@ -53,10 +56,9 @@ public class NewJFrame extends javax.swing.JFrame {
         jLabel1.setText("CALCULATOR");
         jLabel1.setPreferredSize(new java.awt.Dimension(84, 29));
 
-        jTextField1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jTextField1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextField1.setText("Enter the value or operation");
-        jTextField1.setBorder(null);
+        tf.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        tf.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        tf.setBorder(null);
 
         budel.setText("DEL");
         budel.addActionListener(new java.awt.event.ActionListener() {
@@ -66,6 +68,11 @@ public class NewJFrame extends javax.swing.JFrame {
         });
 
         bu9.setText("9");
+        bu9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bu9ActionPerformed(evt);
+            }
+        });
 
         bu8.setText("8");
         bu8.addActionListener(new java.awt.event.ActionListener() {
@@ -82,10 +89,25 @@ public class NewJFrame extends javax.swing.JFrame {
         });
 
         bu7.setText("7");
+        bu7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bu7ActionPerformed(evt);
+            }
+        });
 
         bu6.setText("6");
+        bu6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bu6ActionPerformed(evt);
+            }
+        });
 
         bu5.setText("5");
+        bu5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bu5ActionPerformed(evt);
+            }
+        });
 
         bu4.setText("4");
         bu4.addActionListener(new java.awt.event.ActionListener() {
@@ -95,8 +117,18 @@ public class NewJFrame extends javax.swing.JFrame {
         });
 
         bu3.setText("3");
+        bu3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bu3ActionPerformed(evt);
+            }
+        });
 
         bu2.setText("2");
+        bu2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bu2ActionPerformed(evt);
+            }
+        });
 
         bu1.setText("1");
         bu1.addActionListener(new java.awt.event.ActionListener() {
@@ -129,6 +161,11 @@ public class NewJFrame extends javax.swing.JFrame {
         buc.setText("C");
 
         busub.setText("-");
+        busub.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                busubActionPerformed(evt);
+            }
+        });
 
         bumulti.setText("*");
         bumulti.addActionListener(new java.awt.event.ActionListener() {
@@ -149,7 +186,7 @@ public class NewJFrame extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addComponent(tf, javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap(25, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -197,7 +234,7 @@ public class NewJFrame extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(tf, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -251,6 +288,7 @@ public class NewJFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void bu4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bu4ActionPerformed
+        tf.setText(tf.getText()+"4");
         // TODO add your handling code here:
     }//GEN-LAST:event_bu4ActionPerformed
 
@@ -259,22 +297,30 @@ public class NewJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_buansActionPerformed
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+        tf.setText(tf.getText()+"0");
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton12ActionPerformed
 
     private void budotActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_budotActionPerformed
+        tf.setText(tf.getText()+".");
         // TODO add your handling code here:
     }//GEN-LAST:event_budotActionPerformed
 
     private void bu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bu1ActionPerformed
         // TODO add your handling code here:
+        tf.setText(tf.getText()+"1");
     }//GEN-LAST:event_bu1ActionPerformed
 
     private void buaddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buaddActionPerformed
         // TODO add your handling code here:
+        number1 = Double.parseDouble(tf.getText());
+        tf.setText("");
+        operators = "+";
+        
     }//GEN-LAST:event_buaddActionPerformed
 
     private void bu8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bu8ActionPerformed
+        tf.setText(tf.getText()+"8");
         // TODO add your handling code here:
     }//GEN-LAST:event_bu8ActionPerformed
 
@@ -284,11 +330,55 @@ public class NewJFrame extends javax.swing.JFrame {
 
     private void bumultiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bumultiActionPerformed
         // TODO add your handling code here:
+        number1 = Double.parseDouble(tf.getText());
+        tf.setText("");
+        operators = "*";
     }//GEN-LAST:event_bumultiActionPerformed
 
     private void budiviActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_budiviActionPerformed
         // TODO add your handling code here:
+        number1 = Double.parseDouble(tf.getText());
+        tf.setText("");
+        operators = "/";
     }//GEN-LAST:event_budiviActionPerformed
+
+    private void bu2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bu2ActionPerformed
+        // TODO add your handling code here:
+        tf.setText(tf.getText()+"2");
+    }//GEN-LAST:event_bu2ActionPerformed
+
+    private void bu3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bu3ActionPerformed
+        tf.setText(tf.getText()+"3");
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_bu3ActionPerformed
+
+    private void bu5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bu5ActionPerformed
+           tf.setText(tf.getText()+"5");
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bu5ActionPerformed
+
+    private void bu6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bu6ActionPerformed
+            tf.setText(tf.getText()+"6");
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bu6ActionPerformed
+
+    private void bu7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bu7ActionPerformed
+            tf.setText(tf.getText()+"7");
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bu7ActionPerformed
+
+    private void bu9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bu9ActionPerformed
+        tf.setText(tf.getText()+"9");
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bu9ActionPerformed
+
+    private void busubActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_busubActionPerformed
+        // TODO add your handling code here:
+        number1 = Double.parseDouble(tf.getText());
+        tf.setText("");
+        operators = "-";
+    }//GEN-LAST:event_busubActionPerformed
  
     /**
      * @param args the command line arguments
@@ -345,6 +435,6 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JButton busub;
     private javax.swing.JButton jButton12;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField tf;
     // End of variables declaration//GEN-END:variables
 }
