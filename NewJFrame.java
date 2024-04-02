@@ -159,6 +159,11 @@ public class NewJFrame extends javax.swing.JFrame {
         });
 
         buc.setText("C");
+        buc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bucActionPerformed(evt);
+            }
+        });
 
         busub.setText("-");
         busub.addActionListener(new java.awt.event.ActionListener() {
@@ -294,6 +299,22 @@ public class NewJFrame extends javax.swing.JFrame {
 
     private void buansActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buansActionPerformed
         // TODO add your handling code here:
+        number2 = Double.parseDouble(tf.getText());
+        
+       double result = 0;
+       if(operators=="+")
+           result=number1+number2;
+       else if(operators=="-")
+           result=number1-number2;
+       else if(operators=="*")
+           result=number1*number2;
+       else if(operators=="/")
+           result=number1/number2;
+       
+       tf.setText(result+"");
+       operators=null;
+           
+        
     }//GEN-LAST:event_buansActionPerformed
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
@@ -326,6 +347,7 @@ public class NewJFrame extends javax.swing.JFrame {
 
     private void budelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_budelActionPerformed
         // TODO add your handling code here:
+        tf.setText("");
     }//GEN-LAST:event_budelActionPerformed
 
     private void bumultiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bumultiActionPerformed
@@ -379,6 +401,12 @@ public class NewJFrame extends javax.swing.JFrame {
         tf.setText("");
         operators = "-";
     }//GEN-LAST:event_busubActionPerformed
+
+    private void bucActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bucActionPerformed
+        // TODO add your handling code here:
+       String s = tf.getText();
+       tf.setText(s.substring(0,s.length()-1));
+    }//GEN-LAST:event_bucActionPerformed
  
     /**
      * @param args the command line arguments
